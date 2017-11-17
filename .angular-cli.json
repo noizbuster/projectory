@@ -5,6 +5,7 @@
   },
   "apps": [
     {
+      "appRoot": "projectory",
       "root": "src",
       "outDir": "dist",
       "assets": [
@@ -17,11 +18,14 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "projectory",
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/cytoscape/dist/cytoscape.js",
+        "../node_modules/js-yaml/bin/js-yaml.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -55,6 +59,7 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {
+    }
   }
 }

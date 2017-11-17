@@ -21,7 +21,11 @@
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
+    "@types/lodash": "^4.14.85",
     "core-js": "^2.4.1",
+    "cytoscape": "^3.2.5",
+    "js-yaml": "^3.10.0",
+    "lodash": "^4.17.4",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
   },

@@ -118,13 +118,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "projectory",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "projectory",
       "kebab-case"
     ],
     "use-input-property-decorator": true,

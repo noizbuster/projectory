@@ -1,0 +1,96 @@
+project:
+  name: ROCON
+  elements:
+
+  - data:
+      id: user
+      bg: yellow
+
+  - data:
+      id: concert
+      bg: lightgrey
+
+  - data:
+      id: gocart_service
+      bg: lightblue
+
+  - data:
+      parent: concert
+      id: balcony
+  - data:
+      parent: concert
+      id: gateway
+  - data:
+      parent: concert
+      id: configuration
+  - data:
+      parent: concert
+      id: scheduler
+  - data:
+      parent: concert
+      id: reporter
+
+  - data:
+      parent: gocart_service
+      id: gocart_delivery_plugin
+  - data:
+      parent: gocart_service
+      id: resource_manager
+  - data:
+      parent: gocart_service
+      id: iot_operator
+  - data:
+      parent: gocart_service
+      id: resource_workers
+
+
+  # children of user
+  - data:
+      id: ub
+      source: balcony
+      target: user
+
+  # children of balcony
+  - data:
+      id: bg
+      source: gateway
+      target: balcony
+
+  # children of gateway
+  - data:
+      id: rg
+      source: reporter
+      target: gateway
+
+  - data:
+      id: sg
+      source: scheduler
+      target: gateway
+
+  - data:
+      id: cg
+      source: configuration
+      target: gateway
+
+  # children of scheduler
+  - data:
+      id: sgp
+      source: gocart_delivery_plugin
+      target: scheduler
+
+  # children of gocart_delivery_plugin
+  - data:
+      id: rego
+      source: resource_manager
+      target: gocart_delivery_plugin
+
+  - data:
+      id: iore
+      source: iot_operator
+      target: gocart_delivery_plugin
+
+  # children of iot_operator
+  - data:
+      id: reiot
+      source: resource_workers
+      target: iot_operator
